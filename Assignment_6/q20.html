@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> jss</title>
+    </head>
+    <body>
+        <script>
+         function countCharacters(str) {
+    let charCount = {};
+
+    for (let char of str) {
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    return charCount;
+}
+
+let input = "hello";
+console.log(countCharacters(input)); 
+        </script>
+    </body>
+</html>
