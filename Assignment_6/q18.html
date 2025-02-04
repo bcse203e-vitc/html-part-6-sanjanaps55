@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> jss</title>
+    </head>
+    <body>
+        <script>
+         function firstNonRepeatingChar(str) {
+    for (let char of str) {
+        if (str.indexOf(char) === str.lastIndexOf(char)) {
+            return char;
+        }
+    }
+    return null; 
+}
+
+let input = "swiss";
+console.log(firstNonRepeatingChar(input)); 
+
+        </script>
+    </body>
+</html>
