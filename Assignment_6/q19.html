@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      function findLongestWord(sentence) {
+        const words = sentence.split(" ");
+        let longestWord = "";
+
+        for (let word of words) {
+          if (word.length > longestWord.length) {
+            longestWord = word;
+          }
+        }
+
+        return longestWord;
+      }
+
+      let inputSentence = "I love programming in JavaScript";
+      let result = findLongestWord(inputSentence);
+      console.log(`Input: "${inputSentence}" => Output: "${result}"`);
+    </script>
+  </body>
+</html>
