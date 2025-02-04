@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      function countVowelsAndConsonants(str) {
+        const vowels = "aeiouAEIOU";
+        let vowelCount = 0;
+        let consonantCount = 0;
+        let vowelList = [];
+
+        for (let char of str) {
+          if (char.match(/[a-zA-Z]/)) {
+            if (vowels.includes(char)) {
+              vowelCount++;
+              vowelList.push(char);
+            } else {
+              consonantCount++;
+            }
+          }
+        }
+
+        console.log(`Vowels: ${vowelCount} (${vowelList.join(", ")})`);
+        console.log(`Consonants: ${consonantCount}`);
+      }
+
+      let inputString = "JavaScript";
+      countVowelsAndConsonants(inputString);
+    </script>
+  </body>
+</html>
