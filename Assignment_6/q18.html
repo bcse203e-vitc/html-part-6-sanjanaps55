@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      function firstNonRepeatingCharacter(str) {
+        const charCount = {};
+
+        for (let char of str) {
+          charCount[char] = (charCount[char] || 0) + 1;
+        }
+
+        for (let char of str) {
+          if (charCount[char] === 1) {
+            return char;
+          }
+
+          return null;
+        }
+      }
+
+      let inputString = "swiss";
+      let result = firstNonRepeatingCharacter(inputString);
+      console.log(`Input: "${inputString}" => Output: "${result}"`);
+    </script>
+  </body>
+</html>
