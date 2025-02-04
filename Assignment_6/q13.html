@@ -1,0 +1,30 @@
+!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      function findSecondSmallestAndLargest(arr) {
+        const uniqueArr = [...new Set(arr)];
+
+        uniqueArr.sort((a, b) => a - b);
+
+        if (uniqueArr.length < 2) {
+          return "Array must contain at least two unique numbers.";
+        }
+        const secondSmallest = uniqueArr[1];
+        const secondLargest = uniqueArr[uniqueArr.length - 2];
+
+        return {
+          secondSmallest: secondSmallest,
+          secondLargest: secondLargest,
+        };
+      }
+      let inputArray = [4, 2, 9, 1, 5, 6];
+      let result = findSecondSmallestAndLargest(inputArray);
+      console.log(`Second Smallest: ${result.secondSmallest}`);
+      console.log(`Second Largest: ${result.secondLargest}`);
+    </script>
+  </body>
+</html>
