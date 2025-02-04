@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      let c = 50;
+      let f = 0;
+      f = c * (9 / 5) + 32;
+      console.log("The value of the temperature in Fahrenheit is " + f);
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+
+      let value = toCelsius(77);
+      console.log("The value of the temperature in Celsius is " + value);
+    </script>
+  </body>
+</html>
