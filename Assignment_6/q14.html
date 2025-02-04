@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      function isPangram(sentence) {
+        const cleanedSentence = sentence.toLowerCase().replace(/[^a-z]/g, "");
+
+        const uniqueLetters = new Set(cleanedSentence);
+
+        if (uniqueLetters.size === 26) {
+          return "✅ It is a pangram.";
+        } else {
+          return "❌ It is not a pangram.";
+        }
+      }
+
+      let inputSentence = "The quick brown fox jumps over the lazy dog";
+      console.log(isPangram(inputSentence));
+    </script>
+  </body>
+</html>
