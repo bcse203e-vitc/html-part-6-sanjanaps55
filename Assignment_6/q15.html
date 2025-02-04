@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> jss</title>
+    </head>
+    <body>
+        <script>
+            function findMissingNumber(arr, N) {
+    let expectedSum = (N * (N + 1)) / 2;
+    let actualSum = arr.reduce((sum, num) => sum + num, 0);
+    return expectedSum - actualSum;
+}
+
+
+let numbers = [1, 2, 3, 5, 6];
+let N = 6;
+console.log(findMissingNumber(numbers, N)); 
+
+        </script>
+    </body>
+</html>
