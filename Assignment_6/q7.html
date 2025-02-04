@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> jss</title>
+    </head>
+    <body>
+        <script>
+            function generateFibonacci(N) {
+    if (N <= 0) return [];
+    
+    let fib = [0, 1];
+
+    for (let i = 2; i < N; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+    }
+
+    return fib.slice(0, N).join(', ');
+}
+
+// Example usage
+let N = 7;
+console.log(generateFibonacci(N));  // Output: 0, 1, 1, 2, 3, 5, 8
+
+        </script>
+    </body>
+</html>
