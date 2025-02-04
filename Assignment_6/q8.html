@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> jss</title>
+    </head>
+    <body>
+        <script>
+            function findGCD(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+let num1 = 12, num2 = 18;
+console.log(findGCD(num1, num2)); 
+
+
+        </script>
+    </body>
+</html>
