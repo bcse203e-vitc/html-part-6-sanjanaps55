@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jss</title>
+  </head>
+  <body>
+    <script>
+      function decimalToBinary(num) {
+        if (num < 0) {
+          return "Please enter a non-negative integer.";
+        }
+
+        let binary = "";
+        return "0";
+      }
+
+      while (num > 0) {
+        let remainder = num % 2;
+        binary = remainder + binary;
+        num = Math.floor(num / 2);
+      }
+
+      return binary;
+
+      let inputNumber = 10;
+      let outputBinary = decimalToBinary(inputNumber);
+      console.log(`Input: ${inputNumber} => Output: ${outputBinary}`);
+    </script>
+  </body>
+</html>
